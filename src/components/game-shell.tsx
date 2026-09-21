@@ -145,28 +145,33 @@ function Chip({ children }: { children: ReactNode }) {
 function StartScreen({ onPlay }: { onPlay: () => void }) {
   const best = useGameUi((s) => s.bestTime);
   return (
-    <div className="absolute inset-0 z-30 flex items-end justify-center bg-[linear-gradient(180deg,transparent_0%,rgb(7_7_18_/_0.55)_36%,rgb(7_7_18_/_0.92)_100%)] px-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-16 sm:items-center sm:bg-[rgb(7_7_18_/_0.55)] sm:pb-8">
-      <section className="w-full max-w-md rounded-[var(--radius-xl)] border border-border bg-surface p-6 sm:p-8">
+    <div className="absolute inset-0 z-30 flex items-end justify-center bg-[linear-gradient(180deg,transparent_0%,rgb(7_7_18_/_0.4)_40%,rgb(7_7_18_/_0.88)_100%)] px-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-16 sm:items-center sm:bg-[rgb(7_7_18_/_0.45)] sm:pb-8">
+      <section className="w-full max-w-md rounded-[var(--radius-xl)] border border-border bg-surface p-5 sm:p-8">
+        <img
+          src="/og.jpg"
+          alt="Neon Rush Obby runner on glowing pads"
+          className="mb-4 h-28 w-full rounded-[var(--radius-lg)] border border-border object-cover sm:h-36"
+        />
         <p className="font-display text-xs tracking-[0.28em] text-cyan">FREE TO PLAY</p>
         <h1 className="mt-2 font-display text-4xl font-semibold leading-none tracking-tight text-fg sm:text-5xl">
           Neon Rush
           <span className="block text-purple">Obby</span>
         </h1>
-        <p className="mt-4 text-sm leading-relaxed text-muted">
+        <p className="mt-3 text-sm leading-relaxed text-muted">
           Ten neon stages. Checkpoints save your place. Fall in lava or hit spikes
           and you restart at the last stage. No login. Finish for free.
         </p>
-        <ul className="mt-4 space-y-1.5 text-sm text-fg">
+        <ul className="mt-3 space-y-1.5 text-sm text-fg">
           <li>Move with A / D or the on-screen arrows.</li>
           <li>Jump with Space, W, or the Jump button.</li>
           <li>Cyan pads bounce you. Moving bars carry you.</li>
         </ul>
         {best != null ? (
-          <p className="mt-4 font-display text-sm text-cyan">
+          <p className="mt-3 font-display text-sm text-cyan">
             Best time {formatTime(best)}
           </p>
         ) : null}
-        <Button size="lg" className="mt-6 w-full font-display tracking-wide" onClick={onPlay}>
+        <Button size="lg" className="mt-5 w-full font-display tracking-wide" onClick={onPlay}>
           <Play className="size-5" />
           Play
         </Button>
