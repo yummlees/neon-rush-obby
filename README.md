@@ -4,7 +4,11 @@ A free neon parkour game for a phone or computer browser. Ten stages, checkpoint
 
 ## Play
 
-Open the site and tap **Play**. That is the whole setup.
+**Send this link to Jayden and friends:**
+
+https://neon-rush-obby.vercel.app
+
+Open it and tap **Play**. That is the whole setup.
 
 ## Controls
 
